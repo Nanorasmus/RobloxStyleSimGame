@@ -15,7 +15,6 @@ public class onClick : MonoBehaviour
     {
         counter += multiplier;
         counterText.text = counter.ToString();
-        Debug.Log(counter);
     }
 
     public void LoseMoney()
@@ -28,7 +27,6 @@ public class onClick : MonoBehaviour
         {
             counter -= price;
             multiplier *= 2;
-            Debug.Log(counter);
             Debug.Log("Your new multiplier is: " + multiplier);
             Debug.Log("You just paid: " + price);
             counterText.text = counter.ToString();
