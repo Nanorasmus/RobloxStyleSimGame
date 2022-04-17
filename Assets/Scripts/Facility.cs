@@ -7,6 +7,8 @@ public class Facility : MonoBehaviour
 {
     public float facilitySellDuration = 3f;
     public float facilityBaseProfit = 1f;
+    public float facilityProfitMultiplier = 2f;
+    public float facilityUpgradePriceMultiplier = 2.5f;
 
     [SerializeField] private GameObject facilitySellButton;
     [SerializeField] private Slider sellSlider;
@@ -57,8 +59,8 @@ public class Facility : MonoBehaviour
         {
             gm.RemoveMoney(facilityUpgradePrice);
             facilityLevel += 1;
-            facilityProfit *= 2;
-            facilityUpgradePrice *= 2;
+            facilityProfit *= facilityProfitMultiplier;
+            facilityUpgradePrice *= facilityUpgradePriceMultiplier;
             facilityUpgradePriceText.text = facilityUpgradePrice.ToString() + "$";
             facilitySellPriceText.text = facilityProfit.ToString() + "$";
         }

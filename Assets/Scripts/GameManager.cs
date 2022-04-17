@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    private float money;
 
     [SerializeField] private Text moneyText;
+    [SerializeField] private float money;
 
     public float GetMoney()
     {
